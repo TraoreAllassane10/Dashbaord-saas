@@ -1,9 +1,11 @@
-import DashboardLayout from '@/layouts/DashboardLayout'
+import DashboardLayout from "@/layouts/DashboardLayout";
 
 const Dashboard = () => {
   return (
-    <DashboardLayout>Dashboard</DashboardLayout>
-  )
-}
+    <DashboardLayout>
+      <div className="p-6">Dashboard</div>
+    </DashboardLayout>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

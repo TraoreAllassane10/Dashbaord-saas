@@ -4,10 +4,10 @@ import type React from "react";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="bg-gray-100">
       <AppSidebar />
 
-      <main>
+      <main className="w-full">
         <SidebarTrigger />
         {children}
       </main>
