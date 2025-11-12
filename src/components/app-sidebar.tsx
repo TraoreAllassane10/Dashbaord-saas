@@ -46,7 +46,7 @@ const appSidebar = () => {
         <SidebarGroup>
           <SidebarGroupLabel>SAAS COM</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="space-y-2">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
