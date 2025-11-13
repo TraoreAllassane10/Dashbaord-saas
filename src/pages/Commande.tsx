@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Book, Edit, Eye, Receipt, Trash } from "lucide-react";
+import { Book, Edit, Eye, Trash } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -32,13 +32,7 @@ import {
 } from "@/components/ui/sheet";
 import { Label } from "@/components/ui/label";
 
-interface Client {
-  id: number;
-  nom: string;
-  email: string;
-  telephone: number;
-  montant: number;
-}
+
 
 const Commande = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -110,26 +104,34 @@ const Commande = () => {
                   <Input type="number" id="sheet-demo-name" />
                 </div>
 
-                
                 <div className="grid gap-3">
                   <Label htmlFor="sheet-demo-username">Livraison</Label>
-                  <select name="" id="" className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm">
-                        <option value="">Selectionner le statut de livraison</option>
-                        <option value="">Payé</option>
-                        <option value="">En attente</option>
-                        <option value="">Echoué</option>
+                  <select
+                    name=""
+                    id=""
+                    className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  >
+                    <option value="">
+                      Selectionner le statut de livraison
+                    </option>
+                    <option value="">Payé</option>
+                    <option value="">En attente</option>
+                    <option value="">Echoué</option>
                   </select>
                 </div>
 
-                
                 <div className="grid gap-3">
                   <Label htmlFor="sheet-demo-username">Mode paiement</Label>
-                  <select name="" id="" className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm">
-                        <option value="">Selectionner le mode de paiement</option>
-                        <option value="">Mobile Money</option>
-                        <option value="">Carte banciare</option>
-                        <option value="">Virément</option>
-                        <option value="">Espèces</option>
+                  <select
+                    name=""
+                    id=""
+                    className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  >
+                    <option value="">Selectionner le mode de paiement</option>
+                    <option value="">Mobile Money</option>
+                    <option value="">Carte banciare</option>
+                    <option value="">Virément</option>
+                    <option value="">Espèces</option>
                   </select>
                 </div>
               </div>
@@ -160,7 +162,7 @@ const Commande = () => {
               </Select>
 
               <Button className="cursor-pointer bg-slate-700 hover:bg-slate-700/80">
-                <Book/> Exporter
+                <Book /> Exporter
               </Button>
             </div>
           </CardHeader>

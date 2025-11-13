@@ -5,6 +5,7 @@ import Register from "./pages/auth/Register";
 import Dashboard from "./pages/Dashboard";
 import Client from "./pages/Client";
 import Commande from "./pages/Commande";
+import Parametre from "./pages/Parametre";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/client" element={<Client/>} />
         <Route path="/commande" element={<Commande/>} />
+        <Route path="/paramettre" element={<Parametre/>} />
       </Routes>
     </Router>
   );

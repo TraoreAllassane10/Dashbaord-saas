@@ -28,8 +28,8 @@ const items = [
     icon: ShoppingCart,
   },
   {
-    title: "Settings",
-    url: "#",
+    title: "Paramettres",
+    url: "/paramettre",
     icon: Settings,
   },
 ];
