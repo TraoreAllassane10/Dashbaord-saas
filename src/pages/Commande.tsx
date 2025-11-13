@@ -68,7 +68,7 @@ const Commande = () => {
     <DashboardLayout>
       <div className="p-6">
         <div className="flex justify-between place-items-center mb-6">
-          <h1 className="text-xl text-slate-800 font-bold">Commandes</h1>
+          <h1 className="text-3xl text-slate-800 font-bold">Commandes</h1>
 
           <Sheet>
             <SheetTrigger asChild>

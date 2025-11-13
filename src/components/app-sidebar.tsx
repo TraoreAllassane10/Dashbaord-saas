@@ -1,4 +1,4 @@
-import { ListOrdered, Home, GitGraphIcon, Settings, User } from "lucide-react";
+import { Home, Settings, ShoppingCart, Users } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -20,17 +20,12 @@ const items = [
   {
     title: "Clients",
     url: "/client",
-    icon: User,
+    icon: Users,
   },
   {
     title: "Commandes",
-    url: "#",
-    icon: ListOrdered,
-  },
-  {
-    title: "Statistiques",
-    url: "#",
-    icon: GitGraphIcon,
+    url: "/commande",
+    icon: ShoppingCart,
   },
   {
     title: "Settings",

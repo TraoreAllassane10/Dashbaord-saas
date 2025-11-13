@@ -20,12 +20,11 @@ import {
 } from "@/components/ui/select";
 
 import { Listeclient } from "@/database/data";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -69,7 +68,7 @@ const Client = () => {
     <DashboardLayout>
       <div className="p-6">
         <div className="flex justify-between place-items-center mb-6">
-          <h1 className="text-xl text-slate-800 font-bold">Clients</h1>
+          <h1 className="text-3xl text-slate-800 font-bold">Clients</h1>
 
           <Sheet>
             <SheetTrigger asChild>
@@ -129,7 +128,7 @@ const Client = () => {
 
           <CardContent className="w-full">
             <Table className="w-full">
-              <TableHeader>
+              <TableHeader className="bg-gray-200">
                 <TableRow>
                   <TableHead className="w-[100px]">Nom</TableHead>
                   <TableHead>Email</TableHead>
