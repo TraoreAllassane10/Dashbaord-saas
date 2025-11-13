@@ -125,6 +125,69 @@ const Client = () => {
               </Select>
             </div>
           </CardHeader>
+
+            <CardContent className="w-full">
+              <Table className="w-full">
+                <TableHeader className="bg-gray-200">
+                  <TableRow>
+                    <TableHead className="w-[100px]">Nom</TableHead>
+                    <TableHead>Email</TableHead>
+                    <TableHead>Telephone</TableHead>
+                    <TableHead>Montant depensé</TableHead>
+                    <TableHead>Actions</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {ClientsActuelle?.map((client) => (
+                    <TableRow key={client.id} className="text-gray-500">
+                      <TableCell className="font-medium">{client.nom}</TableCell>
+                      <TableCell>{client.email}</TableCell>
+                      <TableCell>{client.telephone}</TableCell>
+                      <TableCell>
+                        <span className="">
+                          {client.montant.toLocaleString("XOF")} fcfa
+                        </span>
+                      </TableCell>
+                      <TableCell className="flex gap-2">
+                        <a href="">
+                          <Eye />
+                        </a>
+                        <a href="">
+                          <Edit />
+                        </a>
+                        <a href="">
+                          <Trash />
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+
+                  <div className="my-8">
+                    <div className="flex gap-2 ">
+                      <Button
+                        onClick={prevPage}
+                        disabled={currentPage === 1}
+                        className="bg-transparent text-black border border-gray-300 hover:text-white cursor-pointer"
+                      >
+                        Precédent
+                      </Button>
+
+                      <p className="text-sm text-gray-600">
+                        Page {currentPage} / {totalPages}
+                      </p>
+
+                      <Button
+                        onClick={nextPage}
+                        disabled={currentPage === totalPages}
+                        className="bg-transparent text-black border border-gray-300 hover:text-white cursor-pointer"
+                      >
+                        Suivant
+                      </Button>
+                    </div>
+                  </div>
+                </TableBody>
+              </Table>
+            </CardContent>
         </Card>
       </div>
     </DashboardLayout>
